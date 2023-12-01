@@ -7,7 +7,7 @@ export default function HomePage({ meetupData }) {
 }
 
 export async function getStaticProps() {
-  const client = await MongoClient.connect("mongodb://localhost:27017/Meetups");
+  const client = await MongoClient.connect("mongodb+srv://Tejas:test@cluster0.zbrvsbj.mongodb.net/test?retryWrites=true&w=majority");
 
   const db = client.db();
   const collection = db.collection("Meetup");
